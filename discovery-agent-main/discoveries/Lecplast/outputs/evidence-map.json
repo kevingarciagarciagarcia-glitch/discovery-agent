@@ -1,0 +1,23 @@
+{
+  "personas": [
+    { "name": "O. (Operador de extrusión)", "role": "operador de extrusión", "primary": true },
+    { "name": "I. (Operador de impresión)", "role": "operador de impresión (flexografía)", "primary": true },
+    { "name": "S. (Operador de sellado)", "role": "operador de sellado", "primary": true },
+    { "name": "Supervisor de producción", "role": "supervisor", "primary": false },
+    { "name": "Bodega", "role": "bodega", "primary": false },
+    { "name": "Cliente final", "role": "cliente", "primary": false }
+  ],
+  "pains": [
+    { "id": "control-peso-rollo",       "source": "ESTRUSOR.md",  "persona": "O. (Operador de extrusión)" },
+    { "id": "reporte-manual-extrusión", "source": "ESTRUSOR.md",  "persona": "O. (Operador de extrusión)" },
+    { "id": "discrepancia-kilos-resina","source": "ESTRUSOR.md",  "persona": "O. (Operador de extrusión)" },
+    { "id": "desperdicio-arranque",     "source": "IMPRESOR.md",  "persona": "I. (Operador de impresión)" },
+    { "id": "control-viscosidad-manual","source": "IMPRESOR.md",  "persona": "I. (Operador de impresión)" },
+    { "id": "calidad-entrada-impresión","source": "IMPRESOR.md",  "persona": "I. (Operador de impresión)" },
+    { "id": "reporte-tintas-solventes", "source": "IMPRESOR.md",  "persona": "I. (Operador de impresión)" },
+    { "id": "contador-digital-impreciso","source": "SELLADOR.md", "persona": "S. (Operador de sellado)" },
+    { "id": "conteo-manual-bolsas",     "source": "SELLADOR.md",  "persona": "S. (Operador de sellado)" },
+    { "id": "calibre-chueco-sellado",   "source": "SELLADOR.md",  "persona": "S. (Operador de sellado)" },
+    { "id": "reporte-manual-sellado",   "source": "SELLADOR.md",  "persona": "S. (Operador de sellado)" }
+  ]
+}

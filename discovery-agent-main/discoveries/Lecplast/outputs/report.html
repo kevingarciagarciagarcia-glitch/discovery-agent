@@ -1,0 +1,228 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discovery — lecplast</title>
+<style>
+  :root{--paper:#F3F4F1;--ink:#0E1A26;--blue:#1A4E8A;--blue2:#3E6FA6;--amber:#E89B0C;--amber-ink:#9A6605}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'IBM Plex Sans',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:1000px;margin:0 auto;padding:32px 24px 80px}
+  .eyebrow{font:600 12px/1.6 ui-monospace,Menlo,monospace;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--blue)}
+  h1{font-size:34px;margin:.1em 0 .1em;letter-spacing:-.01em}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);
+    border-bottom:2px solid var(--blue);padding-bottom:6px;margin:40px 0 18px;
+    font-family:ui-monospace,Menlo,monospace}
+  h3{font-size:17px;margin:0 0 6px}
+  .sub{color:#3C4A57}
+  .counts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .stat{background:#fff;border:1px solid #D7DCE2;border-radius:12px;padding:10px 16px;min-width:96px}
+  .stat b{display:block;font-size:24px;line-height:1.1}
+  .stat span{font-size:12px;color:#3C4A57}
+  .legend{display:flex;flex-wrap:wrap;gap:18px;background:#fff;border:1px solid #D7DCE2;
+    border-radius:12px;padding:14px 18px;margin-top:18px;font-size:13px}
+  .legend div{display:flex;align-items:center;gap:7px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .grid{display:grid;gap:16px}
+  .cards3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:#fff;border:1px solid #D7DCE2;border-radius:14px;padding:18px}
+  .card.persona{border-top:5px solid var(--blue)}
+  ul.clean{margin:8px 0 0;padding-left:18px}
+  ul.clean li{margin:3px 0}
+  .flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin-top:8px}
+  .flow .node{flex:1;min-width:150px;border-radius:12px;padding:14px 16px;color:#fff}
+  .flow .arrow{display:flex;align-items:center;justify-content:center;padding:0 10px;
+    font-size:24px;color:var(--blue)}
+  .flow .node small{display:block;opacity:.85;font-weight:400;margin-top:4px;font-size:12.5px}
+  .hyp{background:#fff;border:1px solid #D7DCE2;border-left:7px solid #999;border-radius:14px;
+    padding:18px 20px;margin-bottom:14px}
+  .hyp .head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .hyp dl{display:grid;grid-template-columns:140px 1fr;gap:6px 14px;margin:12px 0 0;font-size:14px}
+  .hyp dt{font:600 12px/1.7 ui-monospace,Menlo,monospace;letter-spacing:.06em;
+    text-transform:uppercase;color:#3C4A57}
+  .hyp dd{margin:0}
+  table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #D7DCE2;
+    border-radius:12px;overflow:hidden;font-size:14px}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid #E7EAEE;vertical-align:top}
+  th{background:#E2EAF3;font:600 12px/1.6 ui-monospace,Menlo,monospace;
+    letter-spacing:.06em;text-transform:uppercase;color:#123A68}
+  tr:last-child td{border-bottom:none}
+  .foot{margin-top:48px;font-size:12px;color:#6A7682}
+  .mono{font-family:ui-monospace,Menlo,monospace}
+</style></head><body><div class="wrap">
+<div class="eyebrow">Discovery Agent · reporte visual</div>
+<h1>lecplast</h1>
+<div class="sub">Síntesis del descubrimiento — generado 2026-06-29.</div>
+<div class="counts">
+  <div class="stat"><b>3</b><span>entrevistas</span></div>
+  <div class="stat"><b>6</b><span>personas</span></div>
+  <div class="stat"><b>11</b><span>dolores</span></div>
+  <div class="stat"><b>4</b><span>hipótesis</span></div>
+</div>
+<div class="legend">
+  <div><span class="dot" style="background:#2E7D52"></span>respaldo: primera mano</div>
+  <div><span class="dot" style="background:#E89B0C"></span>respaldo: referenciada</div>
+  <div><span class="dot" style="background:#B3402F"></span>riesgo alto</div>
+  <div><span class="dot" style="background:#E89B0C"></span>riesgo medio</div>
+  <div><span class="dot" style="background:#2E7D52"></span>riesgo bajo</div>
+</div>
+
+<h2>Personas y sus dolores</h2>
+<div class="grid cards3">
+
+  <!-- O. (Operador de extrusión) — primera mano -->
+  <div class="card persona">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+      <h3>O. (Operador de extrusión)</h3>
+      <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#2E7D52;background:#E3F1E8;white-space:nowrap">primera mano</span>
+    </div>
+    <div class="sub">operador de extrusión</div>
+    <div class="sub mono" style="font-size:12px;margin-top:4px">fuente: ESTRUSOR.md</div>
+    <ul class="clean">
+      <li>control-peso-rollo <span class="sub mono" style="font-size:11px">(ESTRUSOR.md)</span></li>
+      <li>reporte-manual-extrusión <span class="sub mono" style="font-size:11px">(ESTRUSOR.md)</span></li>
+      <li>discrepancia-kilos-resina <span class="sub mono" style="font-size:11px">(ESTRUSOR.md)</span></li>
+    </ul>
+  </div>
+
+  <!-- I. (Operador de impresión) — primera mano -->
+  <div class="card persona">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+      <h3>I. (Operador de impresión)</h3>
+      <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#2E7D52;background:#E3F1E8;white-space:nowrap">primera mano</span>
+    </div>
+    <div class="sub">operador de impresión (flexografía)</div>
+    <div class="sub mono" style="font-size:12px;margin-top:4px">fuente: IMPRESOR.md</div>
+    <ul class="clean">
+      <li>desperdicio-arranque <span class="sub mono" style="font-size:11px">(IMPRESOR.md)</span></li>
+      <li>control-viscosidad-manual <span class="sub mono" style="font-size:11px">(IMPRESOR.md)</span></li>
+      <li>calidad-entrada-impresión <span class="sub mono" style="font-size:11px">(IMPRESOR.md)</span></li>
+      <li>reporte-tintas-solventes <span class="sub mono" style="font-size:11px">(IMPRESOR.md)</span></li>
+    </ul>
+  </div>
+
+  <!-- S. (Operador de sellado) — primera mano -->
+  <div class="card persona">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+      <h3>S. (Operador de sellado)</h3>
+      <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#2E7D52;background:#E3F1E8;white-space:nowrap">primera mano</span>
+    </div>
+    <div class="sub">operador de sellado</div>
+    <div class="sub mono" style="font-size:12px;margin-top:4px">fuente: SELLADOR.md</div>
+    <ul class="clean">
+      <li>contador-digital-impreciso <span class="sub mono" style="font-size:11px">(SELLADOR.md)</span></li>
+      <li>conteo-manual-bolsas <span class="sub mono" style="font-size:11px">(SELLADOR.md)</span></li>
+      <li>calibre-chueco-sellado <span class="sub mono" style="font-size:11px">(SELLADOR.md)</span></li>
+      <li>reporte-manual-sellado <span class="sub mono" style="font-size:11px">(SELLADOR.md)</span></li>
+    </ul>
+  </div>
+
+  <!-- Supervisor de producción — referenciada -->
+  <div class="card persona">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+      <h3>Supervisor de producción</h3>
+      <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#9A6605;background:#F6E3BC;white-space:nowrap">referenciada</span>
+    </div>
+    <div class="sub">supervisor</div>
+    <div class="sub mono" style="font-size:12px;margin-top:4px">sin entrevista propia</div>
+  </div>
+
+  <!-- Bodega — referenciada -->
+  <div class="card persona">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+      <h3>Bodega</h3>
+      <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#9A6605;background:#F6E3BC;white-space:nowrap">referenciada</span>
+    </div>
+    <div class="sub">bodega</div>
+    <div class="sub mono" style="font-size:12px;margin-top:4px">sin entrevista propia</div>
+  </div>
+
+  <!-- Cliente final — referenciada -->
+  <div class="card persona">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:8px">
+      <h3>Cliente final</h3>
+      <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#9A6605;background:#F6E3BC;white-space:nowrap">referenciada</span>
+    </div>
+    <div class="sub">cliente</div>
+    <div class="sub mono" style="font-size:12px;margin-top:4px">sin entrevista propia</div>
+  </div>
+
+</div>
+
+<h2>El puente: output → outcome → impact</h2>
+<div class="sub" style="margin-bottom:8px">Lo que entregamos solo vale si cambia un comportamiento y mueve un número. Cada flecha es una hipótesis a comprobar.</div>
+<div class="flow">
+  <div class="node" style="background:#1A4E8A">OUTPUT<small>Las funcionalidades del MVP (ver mvp-canvas.md)</small></div>
+  <div class="arrow">→</div>
+  <div class="node" style="background:#3E6FA6">OUTCOME<small>El cambio de comportamiento esperado en las personas</small></div>
+  <div class="arrow">→</div>
+  <div class="node" style="background:#E89B0C">IMPACT<small>El número de negocio que se mueve</small></div>
+</div>
+
+<h2>Tablero de experimentos (hipótesis a comprobar)</h2>
+
+<!-- H-01 riesgo: alto -->
+<div class="hyp" style="border-left-color:#B3402F">
+  <div class="head">
+    <h3>H-01 · Los operadores registrarán cada rollo o lote en el sistema durante el turno sin percibirlo como carga adicional a su trabajo físico.</h3>
+    <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#B3402F;background:#F6E2DD;white-space:nowrap">riesgo alto</span>
+  </div>
+  <dl>
+    <dt>Hipótesis</dt><dd>Creemos que los operadores de extrusión, impresión y sellado registrarán ≥ 80 % de los eventos de producción en tiempo real (sin esperar al final del turno) si el flujo de registro se completa en ≤ 30 segundos por evento, porque el único incentivo que tienen es no tener que sumar a mano al cierre; si el registro les cuesta más esfuerzo que la hoja actual, lo abandonarán.</dd>
+    <dt>Señal medible</dt><dd>Porcentaje de eventos de producción registrados durante el turno (no al final) sobre el total de eventos del turno, promediado por operador.</dd>
+    <dt>Criterio de éxito</dt><dd>Al menos el 70 % de los turnos piloto tienen un registro ≥ 80 % en tiempo real, durante las primeras 2 semanas de uso con el prototipo.</dd>
+    <dt>Experimento</dt><dd>Mago de Oz con hoja de registro simplificada: durante 2 semanas un operador (uno por rol) usa una hoja rediseñada con un solo campo por evento (peso / conteo / tinta) y lo anota al momento, en lugar del papel actual. Un observador mide cuántos eventos se registran en tiempo real vs. al finalizar el turno.</dd>
+    <dt>Regla de decisión</dt><dd>Si pasa → construir el flujo digital táctil con confianza en la adopción; pasar a H-02. Si falla → investigar qué tipo de evento no se puede registrar en tiempo real y simplificar aún más; evaluar entrada alternativa (escáner, voz) antes de construir la interfaz.</dd>
+  </dl>
+</div>
+
+<!-- H-02 riesgo: alto -->
+<div class="hyp" style="border-left-color:#B3402F">
+  <div class="head">
+    <h3>H-02 · La interfaz táctil es operable con guantes o manos sucias en el entorno real de la planta (ruido, iluminación de fábrica, espacio reducido).</h3>
+    <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#B3402F;background:#F6E2DD;white-space:nowrap">riesgo alto</span>
+  </div>
+  <dl>
+    <dt>Hipótesis</dt><dd>Creemos que los operadores completarán el flujo de registro de un evento en ≤ 30 segundos con guantes puestos y en el entorno real de planta, si la interfaz usa targets táctiles ≥ 44 px y texto de alto contraste, porque en las entrevistas los tres operadores describen que nunca se quitan los guantes para tareas secundarias durante la producción.</dd>
+    <dt>Señal medible</dt><dd>Tiempo en segundos desde que el operador se sitúa frente a la pantalla hasta que confirma el registro de un evento, medido con cronómetro en el entorno real.</dd>
+    <dt>Criterio de éxito</dt><dd>El 80 % de los registros se completan en ≤ 30 segundos, en al menos 20 eventos por rol en el entorno real de planta.</dd>
+    <dt>Experimento</dt><dd>Prototipo desechable: formulario mínimo en tablet (o mockup navegable en Figma proyectado en tablet) + sesión de test de usabilidad con 3 operadores (uno por rol) en la planta. Se cronometra cada registro y se cuentan los errores de entrada (campo enviado con valor incorrecto).</dd>
+    <dt>Regla de decisión</dt><dd>Si pasa → proceder con diseño táctil estándar para el MVP. Si falla → descartar interfaz solo táctil; evaluar botones físicos, lector de código de barras o pedal de confirmación como entrada principal antes de construir.</dd>
+  </dl>
+</div>
+
+<!-- H-03 riesgo: medio -->
+<div class="hyp" style="border-left-color:#9A6605">
+  <div class="head">
+    <h3>H-03 · El supervisor aceptará el reporte digital en pantalla como sustituto del papel firmado para validar el cierre de turno.</h3>
+    <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#9A6605;background:#F6E3BC;white-space:nowrap">riesgo medio</span>
+  </div>
+  <dl>
+    <dt>Hipótesis</dt><dd>Creemos que el supervisor aprobará ≥ 8 de los primeros 10 cierres de turno directamente en el sistema (sin solicitar hoja en papel paralela), si el reporte digital muestra los mismos campos que la hoja actual y permite marcar su validación, porque su dolor no es el papel en sí sino el tiempo que pierde revisando errores aritméticos.</dd>
+    <dt>Señal medible</dt><dd>Número de cierres de turno validados por el supervisor en el sistema sin solicitar una copia o hoja de papel adicional, sobre los primeros 10 cierres del piloto.</dd>
+    <dt>Criterio de éxito</dt><dd>8 de los primeros 10 cierres de turno validados en el sistema sin papel adicional.</dd>
+    <dt>Experimento</dt><dd>Entrevista dirigida de 1 hora con el supervisor: se le muestra una maqueta del reporte digital (PDF o pantalla de Figma con todos los campos actuales) y se le pregunta explícitamente qué faltaría para aceptarlo sin papel. Sin desarrollo adicional.</dd>
+    <dt>Regla de decisión</dt><dd>Si pasa → incluir el flujo de validación del supervisor en el MVP. Si falla → añadir opción de impresión del reporte como transición; no bloquear el MVP por este punto, pero planificar la negociación con el supervisor antes del piloto.</dd>
+  </dl>
+</div>
+
+<!-- H-04 riesgo: bajo -->
+<div class="hyp" style="border-left-color:#2E7D52">
+  <div class="head">
+    <h3>H-04 · Las balanzas existentes en planta son suficientemente precisas para que el registro de peso del operador genere un balance confiable al cierre del turno.</h3>
+    <span style="display:inline-block;padding:2px 10px;border-radius:999px;font:600 12px/1.6 ui-monospace,Menlo,monospace;color:#2E7D52;background:#E3F1E8;white-space:nowrap">riesgo bajo</span>
+  </div>
+  <dl>
+    <dt>Hipótesis</dt><dd>Creemos que los operadores pueden registrar el peso de cada rollo con una precisión de ± 0.1 kg usando las balanzas actuales, porque la variación de 2-3 kg que describe el operador de extrusión se debe a falta de atención (está ocupado en otra tarea cuando el rollo se pasa), no a imprecisión del instrumento.</dd>
+    <dt>Señal medible</dt><dd>Diferencia en kg entre el peso que el operador anota al leer la balanza y el peso obtenido en una segunda medición inmediata del mismo rollo en la misma balanza.</dd>
+    <dt>Criterio de éxito</dt><dd>Diferencia promedio ≤ 0.1 kg en al menos 20 mediciones consecutivas durante un turno normal de extrusión.</dd>
+    <dt>Experimento</dt><dd>Observación directa de 1 turno en extrusión: el observador anota el peso leído por el operador y lo compara con una segunda lectura inmediata del mismo rollo. Sin ningún desarrollo de software.</dd>
+    <dt>Regla de decisión</dt><dd>Si pasa → no hay riesgo en la capa de hardware; proceder al piloto digital con las balanzas actuales. Si falla → evaluar calibración o sustitución de las balanzas antes de iniciar el piloto; el sistema depende de lecturas confiables.</dd>
+  </dl>
+</div>
+
+<div class="foot">Generado por <span class="mono">build-report.py</span> desde
+<span class="mono">evidence-map.json</span> y <span class="mono">experiment-board.json</span>.
+El detalle en prosa (requisitos, user stories, MVP Canvas completo) está en los .md de
+<span class="mono">lecplast/outputs/</span>.</div>
+</div></body></html>

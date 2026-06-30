@@ -1,0 +1,44 @@
+{
+  "hypotheses": [
+    {
+      "id": "H-01",
+      "risk": "alto",
+      "assumption": "Los operadores registrarán cada rollo o lote en el sistema durante el turno sin percibirlo como carga adicional a su trabajo físico.",
+      "hypothesis": "Creemos que los operadores de extrusión, impresión y sellado registrarán ≥ 80 % de los eventos de producción en tiempo real (sin esperar al final del turno) si el flujo de registro se completa en ≤ 30 segundos por evento, porque el único incentivo que tienen es no tener que sumar a mano al cierre; si el registro les cuesta más esfuerzo que la hoja actual, lo abandonarán.",
+      "metric": "Porcentaje de eventos de producción registrados durante el turno (no al final) sobre el total de eventos del turno, promediado por operador.",
+      "threshold": "Al menos el 70 % de los turnos piloto tienen un registro ≥ 80 % en tiempo real, durante las primeras 2 semanas de uso con el prototipo.",
+      "experiment": "Mago de Oz con hoja de registro simplificada: durante 2 semanas un operador (uno por rol) usa una hoja rediseñada con un solo campo por evento (peso / conteo / tinta) y lo anota al momento, en lugar del papel actual. Un observador mide cuántos eventos se registran en tiempo real vs. al finalizar el turno.",
+      "decision": "Si pasa → construir el flujo digital táctil con confianza en la adopción; pasar a H-02. Si falla → investigar qué tipo de evento no se puede registrar en tiempo real y simplificar aún más; evaluar entrada alternativa (escáner, voz) antes de construir la interfaz."
+    },
+    {
+      "id": "H-02",
+      "risk": "alto",
+      "assumption": "La interfaz táctil es operable con guantes o manos sucias en el entorno real de la planta (ruido, iluminación de fábrica, espacio reducido).",
+      "hypothesis": "Creemos que los operadores completarán el flujo de registro de un evento en ≤ 30 segundos con guantes puestos y en el entorno real de planta, si la interfaz usa targets táctiles ≥ 44 px y texto de alto contraste, porque en las entrevistas los tres operadores describen que nunca se quitan los guantes para tareas secundarias durante la producción.",
+      "metric": "Tiempo en segundos desde que el operador se sitúa frente a la pantalla hasta que confirma el registro de un evento, medido con cronómetro en el entorno real.",
+      "threshold": "El 80 % de los registros se completan en ≤ 30 segundos, en al menos 20 eventos por rol en el entorno real de planta.",
+      "experiment": "Prototipo desechable: formulario mínimo en tablet (o mockup navegable en Figma proyectado en tablet) + sesión de test de usabilidad con 3 operadores (uno por rol) en la planta. Se cronometra cada registro y se cuentan los errores de entrada (campo enviado con valor incorrecto).",
+      "decision": "Si pasa → proceder con diseño táctil estándar para el MVP. Si falla → descartar interfaz solo táctil; evaluar botones físicos, lector de código de barras o pedal de confirmación como entrada principal antes de construir."
+    },
+    {
+      "id": "H-03",
+      "risk": "medio",
+      "assumption": "El supervisor aceptará el reporte digital en pantalla como sustituto del papel firmado para validar el cierre de turno.",
+      "hypothesis": "Creemos que el supervisor aprobará ≥ 8 de los primeros 10 cierres de turno directamente en el sistema (sin solicitar hoja en papel paralela), si el reporte digital muestra los mismos campos que la hoja actual y permite marcar su validación, porque su dolor no es el papel en sí sino el tiempo que pierde revisando errores aritméticos.",
+      "metric": "Número de cierres de turno validados por el supervisor en el sistema sin solicitar una copia o hoja de papel adicional, sobre los primeros 10 cierres del piloto.",
+      "threshold": "8 de los primeros 10 cierres de turno validados en el sistema sin papel adicional.",
+      "experiment": "Entrevista dirigida de 1 hora con el supervisor: se le muestra una maqueta del reporte digital (PDF o pantalla de Figma con todos los campos actuales) y se le pregunta explícitamente qué faltaría para aceptarlo sin papel. Sin desarrollo adicional.",
+      "decision": "Si pasa → incluir el flujo de validación del supervisor en el MVP. Si falla → añadir opción de impresión del reporte como transición; no bloquear el MVP por este punto, pero planificar la negociación con el supervisor antes del piloto."
+    },
+    {
+      "id": "H-04",
+      "risk": "bajo",
+      "assumption": "Las balanzas existentes en planta son suficientemente precisas para que el registro de peso del operador genere un balance confiable al cierre del turno.",
+      "hypothesis": "Creemos que los operadores pueden registrar el peso de cada rollo con una precisión de ± 0.1 kg usando las balanzas actuales, porque la variación de 2-3 kg que describe el operador de extrusión se debe a falta de atención (está ocupado en otra tarea cuando el rollo se pasa), no a imprecisión del instrumento.",
+      "metric": "Diferencia en kg entre el peso que el operador anota al leer la balanza y el peso obtenido en una segunda medición inmediata del mismo rollo en la misma balanza.",
+      "threshold": "Diferencia promedio ≤ 0.1 kg en al menos 20 mediciones consecutivas durante un turno normal de extrusión.",
+      "experiment": "Observación directa de 1 turno en extrusión: el observador anota el peso leído por el operador y lo compara con una segunda lectura inmediata del mismo rollo. Sin ningún desarrollo de software.",
+      "decision": "Si pasa → no hay riesgo en la capa de hardware; proceder al piloto digital con las balanzas actuales. Si falla → evaluar calibración o sustitución de las balanzas antes de iniciar el piloto; el sistema depende de lecturas confiables."
+    }
+  ]
+}
